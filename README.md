@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FX Studio - Photography Portfolio
 
-## Getting Started
+A minimal, high-end photography portfolio website showcasing commercial photography with elegant design and performance.
 
-First, run the development server:
+## 🎯 Features
+
+- **Full-screen Hero Slider** - Immersive first impression with rotating featured images
+- **Portfolio Gallery** - Grid layout with lightbox viewing experience
+- **Responsive Design** - Optimized for all devices
+- **Performance Optimized** - Fast loading with Next.js image optimization
+- **Clean Navigation** - Apple-inspired minimal interface
+
+## 🛠 Tech Stack
+
+- **Next.js 14** - React framework with App Router
+- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Type-safe development
+- **GitHub Pages** - Static site hosting
+
+## 🚀 Getting Started
+
+### Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view in browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Create production build
+npm run build
 
-## Learn More
+# Preview production build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This site automatically deploys to GitHub Pages when pushing to the `main` branch.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Live URL:** `https://oceanrich.github.io/FX-Studio/`
 
-## Deploy on Vercel
+### Setup GitHub Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Go to repository Settings → Pages
+2. Source: Select "GitHub Actions"
+3. Push to main branch to trigger deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Structure
+
+```
+fx-studio/
+├── app/
+│   ├── components/      # Reusable components
+│   │   ├── Logo.tsx
+│   │   ├── Navigation.tsx
+│   │   └── HeroSlider.tsx
+│   ├── portfolio/       # Portfolio page
+│   ├── about/          # About page
+│   ├── contact/        # Contact page
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Home page
+│   └── globals.css     # Global styles
+├── public/
+│   └── images/         # Photography assets
+└── .github/
+    └── workflows/      # GitHub Actions
+```
+
+## 🎨 Design Philosophy
+
+- **Minimal & Clean** - Let the photography speak
+- **High-end Feel** - Premium typography and spacing
+- **Performance First** - Optimized loading and interactions
+- **Apple-inspired** - Refined, intentional design choices
+
+## 📝 License
+
+© 2024 FX Studio. All rights reserved.
