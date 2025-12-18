@@ -45,13 +45,12 @@ export default function Contact() {
               {/* WeChat */}
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                 <div className="flex-shrink-0">
-                  <svg className="w-8 h-8 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9.5 4C5.36 4 2 6.69 2 10c0 1.89 1.08 3.56 2.78 4.66-.17.39-.73 1.82-1.14 2.76-.04.09-.02.19.04.27.06.08.15.12.25.12.57 0 2.15-.52 3.32-1.01.66.13 1.36.2 2.09.2.21 0 .42-.01.62-.02-.09-.39-.14-.79-.14-1.21 0-3.31 3.13-6 7-6 .26 0 .51.02.76.04C17.13 6.19 13.63 4 9.5 4zm-2 5.5c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1zm4 0c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1z"/>
-                    <path d="M16.5 11c-3.03 0-5.5 2.02-5.5 4.5s2.47 4.5 5.5 4.5c.57 0 1.13-.07 1.65-.2.75.32 2.21.78 2.66.78.08 0 .16-.03.21-.09.05-.06.07-.14.04-.21-.26-.6-.72-1.89-.88-2.28 1.25-.77 2.07-1.99 2.07-3.35 0-2.48-2.47-4.65-5.75-4.65zm-2.5 5.75c-.41 0-.75-.34-.75-.75s.34-.75.75-.75.75.34.75.75-.34.75-.75.75zm3.5 0c-.41 0-.75-.34-.75-.75s.34-.75.75-.75.75.34.75.75-.34.75-.75.75z"/>
-                  </svg>
+                  <div className="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center">
+                    <span className="text-xl font-medium text-gray-700">微</span>
+                  </div>
                 </div>
                 <div className="flex-grow">
-                  <p className="text-sm text-gray-500 mb-1">{t.contact.wechat}</p>
+                  <p className="text-sm text-gray-500 mb-1">WeChat / {t.contact.wechat}</p>
                   <p className="text-lg font-medium text-black">
                     Aaronshue_73
                   </p>
