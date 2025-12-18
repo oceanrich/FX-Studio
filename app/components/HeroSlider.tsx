@@ -10,7 +10,7 @@ const heroImages = [
   '8a3f4bfc45b8be1f8f47ac8de45e9178.JPG',
 ];
 
-export default function HeroSlider() {
+export default function HeroSlider({ slogan }: { slogan: string }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function HeroSlider() {
             </span>
           </h1>
           <p className="text-lg md:text-xl tracking-widest font-light opacity-90">
-            Images with a Point of View
+            {slogan}
           </p>
         </div>
       </div>

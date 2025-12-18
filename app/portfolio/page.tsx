@@ -49,9 +49,12 @@ const images = [
   'ffe04a1b2a2a9b871bdaf0b03d137752.JPG',
 ];
 
+import { useLanguage } from '../contexts/LanguageContext';
+
 export default function Portfolio() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
+  const { t } = useLanguage();
 
   const openLightbox = (index: number) => {
     setCurrentImage(index);
@@ -76,10 +79,10 @@ export default function Portfolio() {
       <section className="py-20 px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto text-center space-y-4">
           <h1 className="text-5xl md:text-6xl font-light tracking-wide">
-            Portfolio
+            {t.portfolio.title}
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Commercial Photography
+            {t.portfolio.subtitle}
           </p>
         </div>
       </section>

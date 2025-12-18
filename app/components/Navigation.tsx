@@ -3,9 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,20 +38,21 @@ export default function Navigation() {
               href="/portfolio"
               className="text-black hover:opacity-50 transition-opacity"
             >
-              Portfolio
+              {t.nav.portfolio}
             </Link>
             <Link
               href="/about"
               className="text-black hover:opacity-50 transition-opacity"
             >
-              About
+              {t.nav.about}
             </Link>
             <Link
               href="/contact"
               className="text-black hover:opacity-50 transition-opacity"
             >
-              Contact
+              {t.nav.contact}
             </Link>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

@@ -1,4 +1,10 @@
+'use client';
+
+import { useLanguage } from '../contexts/LanguageContext';
+
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <main className="pt-20">
       <section className="min-h-screen py-32 px-6 lg:px-12 bg-white">
@@ -6,26 +12,23 @@ export default function Contact() {
           {/* Header */}
           <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-light tracking-wide">
-              Get in Touch
+              {t.contact.title}
             </h1>
             <p className="text-xl text-gray-600">
-              Let's create something remarkable together
+              {t.contact.subtitle}
             </p>
           </div>
 
           {/* Contact Info */}
           <div className="pt-12 space-y-8 text-lg text-gray-700">
-            <p>
-              We'd love to hear about your project and explore how we can 
-              bring your vision to life.
-            </p>
+            <p>{t.contact.description}</p>
             
             <div className="pt-8 space-y-4">
               <p className="text-2xl font-light">
-                Coming Soon
+                {t.contact.comingSoon}
               </p>
               <p className="text-gray-500">
-                Contact information will be available shortly.
+                {t.contact.comingSoonDesc}
               </p>
             </div>
           </div>
