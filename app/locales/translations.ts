@@ -47,8 +47,8 @@ export const translations = {
       title: 'Get in Touch',
       subtitle: 'Let\'s create something remarkable together',
       description: 'We\'d love to hear about your project and explore how we can bring your vision to life.',
-      comingSoon: 'Coming Soon',
-      comingSoonDesc: 'Contact information will be available shortly.',
+      email: 'Email',
+      wechat: 'WeChat',
     },
   },
   'zh-CN': {
@@ -99,8 +99,8 @@ export const translations = {
       title: '联系我们',
       subtitle: '让我们一起创造非凡',
       description: '我们很乐意了解您的项目，探索如何将您的愿景变为现实。',
-      comingSoon: '即将推出',
-      comingSoonDesc: '联系方式即将提供。',
+      email: '邮箱',
+      wechat: '微信',
     },
   },
   'zh-TW': {
@@ -151,8 +151,8 @@ export const translations = {
       title: '聯絡我們',
       subtitle: '讓我們一起創造非凡',
       description: '我們很樂意了解您的項目，探索如何將您的願景變為現實。',
-      comingSoon: '即將推出',
-      comingSoonDesc: '聯絡方式即將提供。',
+      email: '郵箱',
+      wechat: '微信',
     },
   },
 };
