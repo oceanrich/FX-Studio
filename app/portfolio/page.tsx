@@ -95,7 +95,7 @@ export default function Portfolio() {
                 className="group relative aspect-[3/4] overflow-hidden bg-gray-100 cursor-pointer"
               >
                 <img
-                  src={`/FX-Studio/images/${image}`}
+                  src={`/images/${image}`}
                   alt={`Portfolio image ${index + 1}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -152,7 +152,7 @@ export default function Portfolio() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={`/FX-Studio/images/${images[currentImage]}`}
+              src={`/images/${images[currentImage]}`}
               alt={`Portfolio image ${currentImage + 1}`}
               className="max-w-full max-h-full object-contain"
             />
