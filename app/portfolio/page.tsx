@@ -84,6 +84,12 @@ export default function Portfolio() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
+                {/* 分类标签 */}
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="inline-block px-3 py-1 bg-black/70 backdrop-blur-sm text-white text-xs tracking-wide rounded-full">
+                    {t.portfolio.categories[image.category]}
+                  </span>
+                </div>
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               </button>
             ))}

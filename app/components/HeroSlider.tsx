@@ -31,7 +31,7 @@ export default function HeroSlider({ slogan }: { slogan: string }) {
           }`}
         >
           <Image
-            src={`/images/${image}`}
+            src={`/images/commercial/${image}`}
             alt={`FX Studio Photography ${index + 1}`}
             fill
             className="object-cover"

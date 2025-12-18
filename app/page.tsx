@@ -43,7 +43,7 @@ export default function Home() {
                 className="group relative aspect-[3/4] overflow-hidden bg-gray-200"
               >
                 <img
-                  src={`/images/${img}`}
+                  src={`/images/commercial/${img}`}
                   alt={`Featured work ${i + 1}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
