@@ -17,7 +17,13 @@ export const translations = {
     // Portfolio Page
     portfolio: {
       title: 'Portfolio',
-      subtitle: 'Commercial Photography',
+      subtitle: 'Our Photography Work',
+      categories: {
+        all: 'All',
+        commercial: 'Commercial',
+        portrait: 'Portrait',
+        wedding: 'Wedding',
+      },
     },
     // About Page
     about: {
@@ -31,6 +37,7 @@ export const translations = {
         commercial: 'Commercial Photography',
         brand: 'Brand & Product Photography',
         portrait: 'Portrait Photography',
+        wedding: 'Wedding Photography',
         editorial: 'Editorial & Lifestyle',
         creative: 'Creative Direction',
       },
@@ -62,7 +69,13 @@ export const translations = {
     // 作品集页面
     portfolio: {
       title: '作品集',
-      subtitle: '商业摄影',
+      subtitle: '我们的摄影作品',
+      categories: {
+        all: '全部',
+        commercial: '商业摄影',
+        portrait: '人像摄影',
+        wedding: '婚礼摄影',
+      },
     },
     // 关于页面
     about: {
@@ -76,6 +89,7 @@ export const translations = {
         commercial: '商业摄影',
         brand: '品牌与产品摄影',
         portrait: '人像摄影',
+        wedding: '婚礼摄影',
         editorial: '编辑与生活方式摄影',
         creative: '创意指导',
       },
@@ -107,7 +121,13 @@ export const translations = {
     // 作品集頁面
     portfolio: {
       title: '作品集',
-      subtitle: '商業攝影',
+      subtitle: '我們的攝影作品',
+      categories: {
+        all: '全部',
+        commercial: '商業攝影',
+        portrait: '人像攝影',
+        wedding: '婚禮攝影',
+      },
     },
     // 關於頁面
     about: {
@@ -121,6 +141,7 @@ export const translations = {
         commercial: '商業攝影',
         brand: '品牌與產品攝影',
         portrait: '人像攝影',
+        wedding: '婚禮攝影',
         editorial: '編輯與生活方式攝影',
         creative: '創意指導',
       },

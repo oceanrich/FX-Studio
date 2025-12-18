@@ -33,6 +33,7 @@ export default function About() {
               <li>• {t.about.services.commercial}</li>
               <li>• {t.about.services.brand}</li>
               <li>• {t.about.services.portrait}</li>
+              <li>• {t.about.services.wedding}</li>
               <li>• {t.about.services.editorial}</li>
               <li>• {t.about.services.creative}</li>
             </ul>
