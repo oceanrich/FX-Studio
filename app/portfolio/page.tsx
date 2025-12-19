@@ -35,22 +35,22 @@ export default function Portfolio() {
   return (
     <main className="pt-20">
       {/* Header */}
-      <section className="py-20 px-6 lg:px-12 bg-white">
+      <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto text-center space-y-6">
-          <h1 className="text-5xl md:text-6xl font-light tracking-wide">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-wide">
             {t.portfolio.title}
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             {t.portfolio.subtitle}
           </p>
 
           {/* 分类筛选 */}
-          <div className="flex justify-center gap-4 pt-8 flex-wrap">
+          <div className="flex justify-center gap-2 md:gap-4 pt-6 md:pt-8 flex-wrap px-4">
             {(['all', 'commercial', 'portrait', 'wedding'] as Category[]).map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm tracking-wide transition-all ${
+                className={`px-4 md:px-6 py-2 rounded-full text-xs md:text-sm tracking-wide transition-all whitespace-nowrap ${
                   selectedCategory === category
                     ? 'bg-black text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -62,21 +62,21 @@ export default function Portfolio() {
           </div>
 
           {/* 图片计数 */}
-          <p className="text-sm text-gray-500">
+          <p className="text-xs md:text-sm text-gray-500">
             {filteredImages.length} {filteredImages.length === 1 ? 'image' : 'images'}
           </p>
         </div>
       </section>
 
       {/* Gallery Grid */}
-      <section className="px-6 lg:px-12 pb-20">
+      <section className="px-4 sm:px-6 lg:px-12 pb-16 md:pb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {filteredImages.map((image, index) => (
               <button
                 key={`${image.category}-${image.filename}`}
                 onClick={() => openLightbox(index)}
-                className="group relative aspect-[3/4] overflow-hidden bg-gray-100 cursor-pointer"
+                className="group relative aspect-[3/4] overflow-hidden bg-gray-100 cursor-pointer rounded-sm"
               >
                 <img
                   src={getImagePath(image)}
@@ -85,8 +85,8 @@ export default function Portfolio() {
                   loading="lazy"
                 />
                 {/* 分类标签 */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-block px-3 py-1 bg-black/70 backdrop-blur-sm text-white text-xs tracking-wide rounded-full">
+                <div className="absolute top-3 md:top-4 left-3 md:left-4 z-10">
+                  <span className="inline-block px-2 md:px-3 py-1 bg-black/70 backdrop-blur-sm text-white text-xs tracking-wide rounded-full">
                     {t.portfolio.categories[image.category]}
                   </span>
                 </div>
