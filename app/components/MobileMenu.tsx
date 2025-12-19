@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { useLanguage } from '../contexts/LanguageContext';
 import { usePathname } from 'next/navigation';
@@ -19,36 +20,11 @@ export default function MobileMenu() {
     { href: '/contact', label: t.nav.contact },
   ];
 
-  return (
+  const menuContent = (
     <>
-      {/* 汉堡按钮 */}
-      <button
-        onClick={toggleMenu}
-        className="md:hidden relative w-10 h-10 text-black focus:outline-none"
-        aria-label="Toggle menu"
-      >
-        <div className="absolute w-6 h-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-          <span
-            className={`absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
-              isOpen ? 'rotate-45 top-2' : 'top-0'
-            }`}
-          />
-          <span
-            className={`absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out top-2 ${
-              isOpen ? 'opacity-0' : 'opacity-100'
-            }`}
-          />
-          <span
-            className={`absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
-              isOpen ? '-rotate-45 top-2' : 'top-4'
-            }`}
-          />
-        </div>
-      </button>
-
       {/* 遮罩层 */}
       <div
-        className={`fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/50 z-[100] md:hidden transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={closeMenu}
@@ -56,9 +32,10 @@ export default function MobileMenu() {
 
       {/* 菜单面板 */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[60] md:hidden transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[101] md:hidden transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
+        style={{ backgroundColor: '#ffffff' }}
       >
         <div className="flex flex-col h-full">
           {/* 顶部关闭按钮 */}
@@ -107,6 +84,38 @@ export default function MobileMenu() {
           </nav>
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <>
+      {/* 汉堡按钮 */}
+      <button
+        onClick={toggleMenu}
+        className="md:hidden relative w-10 h-10 text-black focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <div className="absolute w-6 h-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+          <span
+            className={`absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
+              isOpen ? 'rotate-45 top-2' : 'top-0'
+            }`}
+          />
+          <span
+            className={`absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out top-2 ${
+              isOpen ? 'opacity-0' : 'opacity-100'
+            }`}
+          />
+          <span
+            className={`absolute h-0.5 w-6 bg-current transform transition duration-300 ease-in-out ${
+              isOpen ? '-rotate-45 top-2' : 'top-4'
+            }`}
+          />
+        </div>
+      </button>
+
+      {/* 使用 Portal 渲染菜单到 body */}
+      {typeof window !== 'undefined' && createPortal(menuContent, document.body)}
     </>
   );
 }
