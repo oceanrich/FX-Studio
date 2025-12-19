@@ -4,7 +4,7 @@ import Navigation from "./components/Navigation";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 export const metadata: Metadata = {
-  title: "FX Studio - Images with a Point of View",
+  title: "FX Studio - Images, with intention.",
   description: "Images, with intention.",
   keywords: ["photography", "commercial photography", "FX Studio", "portfolio"],
 };
