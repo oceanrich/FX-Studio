@@ -47,16 +47,16 @@ export default function MobileMenu() {
       </button>
 
       {/* 遮罩层 */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
-          onClick={closeMenu}
-        />
-      )}
+      <div
+        className={`fixed inset-0 bg-black/50 z-40 md:hidden transition-opacity duration-300 ${
+          isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={closeMenu}
+      />
 
       {/* 菜单面板 */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[60] md:hidden transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -110,4 +110,6 @@ export default function MobileMenu() {
     </>
   );
 }
+
+
 
