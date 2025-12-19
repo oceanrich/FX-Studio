@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -8,8 +8,13 @@ import { usePathname } from 'next/navigation';
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { t } = useLanguage();
   const pathname = usePathname();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -115,7 +120,7 @@ export default function MobileMenu() {
       </button>
 
       {/* 使用 Portal 渲染菜单到 body */}
-      {typeof window !== 'undefined' && createPortal(menuContent, document.body)}
+      {mounted && createPortal(menuContent, document.body)}
     </>
   );
 }
