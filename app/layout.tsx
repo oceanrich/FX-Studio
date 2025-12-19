@@ -5,7 +5,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 
 export const metadata: Metadata = {
   title: "FX Studio - Images with a Point of View",
-  description: "A minimal, high-end photography portfolio showcasing commercial photography with elegant design.",
+  description: "Images, with intention.",
   keywords: ["photography", "commercial photography", "FX Studio", "portfolio"],
 };
 
